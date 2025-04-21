@@ -21,7 +21,7 @@ const Navbar = () => {
   }
 
   return (
-    <div className="flex items-center justify-between h-[70px] md:px-10 px-5">
+    <div className="flex fixed top-0 left-0 right-0 z-10 items-center justify-between h-[70px] md:px-10 px-5 bg-white">
       {/* <div className="w-[70px] h-[80px]"> */}
       <img
         src="/logo.png"
@@ -49,14 +49,14 @@ const Navbar = () => {
       {sidebar ? (
         <div className="block lg:hidden">
           <FaXmark
-            className="h-[30px] w-[30px]"
+            className="h-[30px] w-[30px] cursor-pointer"
             onClick={() => handleCloseSidebar()}
           />
         </div>
       ) : (
         <div className="block lg:hidden">
           <MdMenu
-            className="h-[30px] w-[30px]"
+            className="h-[30px] w-[30px] cursor-pointer"
             onClick={() => handleOpenSidebar()}
           />
         </div>
