@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom"
+import { portfolio } from "../../utils/ourPortfolio"
+import { FaLongArrowAltRight } from "react-icons/fa";
 
 const OurPortfolio = () => {
   return (
@@ -8,6 +11,23 @@ const OurPortfolio = () => {
       <h1 className="font-bold text-[28px] text-center mt-2">
         Our Latest Case Studies
       </h1>
+      <div className="w-full flex flex-col gap-10 mt-16">
+        {portfolio.map((item) => (
+          <>
+          <div className="w-full border-t border-t-[#e5e5e5]"></div>
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+            <div className="flex flex-col md:flex-row md:w-[45%] justify-between md:items-center gap-1">
+              <h1 className="font-semibold text-[24px]">{item.name}</h1>
+              <p className="uppercase text-[#666666] text-[14px]">{item.technology}</p>
+            </div>
+            <Link to={`${item.detail}/${item.id}`} className="flex items-center justify-center gap-2 bg-gray-100 h-[50px] w-[130px] rounded-4xl hover:bg-[#0f4bb9] group transition-all duration-500 ease-in-out">
+              <FaLongArrowAltRight className="text-[#666666] group-hover:text-white"/>
+              <p className="text-[#666666] text-[14px] font-semibold group-hover:text-white">View Detail</p>
+            </Link>
+          </div>
+          </>
+        ))}
+      </div>
     </div>
   )
 }
