@@ -4,6 +4,7 @@ import OurPortfolio from "./Components/Home/OurPortfolio"
 import SecondBanner from "./Components/Home/SecondBanner"
 import ServiceSection from "./Components/Home/ServiceSection"
 import TeamMembers from "./Components/Home/TeamMembers"
+import Testimonials from "./Components/Home/Testimonials"
 
 const Home = () => {
   return (
@@ -14,6 +15,7 @@ const Home = () => {
      <ServiceSection />
      <OurPortfolio />
      <TeamMembers />
+     <Testimonials />
     </>
   )
 }
