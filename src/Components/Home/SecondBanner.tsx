@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import { services } from '../../utils/services'
-import { motion, useAnimation } from 'framer-motion'
+import { motion } from 'framer-motion'
 
 const SecondBanner = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -50,14 +50,15 @@ const SecondBanner = () => {
         <div className="flex flex-col gap-2">
           <h1 className="text-white uppercase">Our Services</h1>
           <h1 className="text-[22px] sm:text-[28px] lg:text-[32px] font-bold max-w-[471px] text-white">
-            We Are Expert At Our Special Services.
+            Delivering Excellence Through Specialized Solutions
           </h1>
         </div>
         <div>
           <p className="text-white text-[14px] leading-[26px] max-w-[561px]">
-            What We Are Expert At Our Special Services. Nunc tempor ultrices
-            iaculis. Cras suscipit odio ut neque interdum, sed faucibus lorem
-            feugiat...
+            At CodexTec, we combine industry expertise with innovative
+            technology to deliver tailored solutions that drive success. From
+            digital transformation to IT consulting, our services are designed
+            to meet the unique needs of businesses across every sector.
           </p>
         </div>
       </div>
