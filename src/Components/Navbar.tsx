@@ -26,7 +26,7 @@ const Navbar = () => {
       <img
         src="/logo.png"
         alt="logo"
-        className="w-[150px] h-[150px] object-cover"
+        className="w-[130px] object-cover"
       />
       {/* </div> */}
       <div className="hidden lg:flex items-center gap-4 font-semibold text-lg">
@@ -41,7 +41,7 @@ const Navbar = () => {
         <FiLinkedin className="w-[20px] h-[20px]" />
         <BsInstagram className="w-[20px] h-[20px]" />
       </div>
-      <div className="hidden lg:flex items-center gap-4 font-semibold text-lg">
+      <div className="hidden xl:flex items-center gap-4 font-semibold">
         <p>codextec93@gmail.com</p>
         <p>/</p>
         <p>+2348134662374</p>

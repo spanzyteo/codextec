@@ -41,7 +41,7 @@ const Testimonials = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setStartIndex((prevIndex) => (prevIndex >= maxIndex ? 0 : prevIndex + 1))
-    }, 8000)
+    }, 5000)
 
     return () => clearInterval(interval)
   }, [maxIndex])

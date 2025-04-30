@@ -59,10 +59,10 @@ const TeamMembers = () => {
 
        {/* Infinite Scroll Section */}
        <div
-        ref={containerRef}
-        className="overflow-hidden w-full flex mt-16 mx-auto"
+        // ref={containerRef}
+        className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-full mt-16 mx-auto"
       >
-        <motion.div
+        {/* <motion.div
           className="flex flex-nowrap"
           style={{ width: totalScrollWidth }}
           animate={{ x: [`0px`, `-${totalScrollWidth / 2}px`] }}
@@ -71,16 +71,16 @@ const TeamMembers = () => {
             ease: 'linear',
             duration: 20,
           }}
-        >
-          {duplicatedTeam.map((item, index) => (
+        > */}
+          {team.map((item, index) => (
             <div
               key={`${item.id}-${index}`}
               className="flex-shrink-0 aspect-[4/3] relative cursor-pointer group"
-              style={{
-                width: `${itemWidth}px`,
-                marginRight:
-                  index !== duplicatedTeam.length - 1 ? `${gap}px` : '0px',
-              }}
+              // style={{
+              //   width: `${itemWidth}px`,
+              //   marginRight:
+              //     index !== duplicatedTeam.length - 1 ? `${gap}px` : '0px',
+              // }}
             >
               <img
                 src={item.image}
@@ -95,7 +95,7 @@ const TeamMembers = () => {
               </div>
             </div>
           ))}
-        </motion.div>
+        {/* </motion.div> */}
       </div>
     </div>
   )
