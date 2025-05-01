@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react"
 import { team } from "../../utils/teamMembers"
-import { motion, useAnimation } from 'framer-motion'
 
 const TeamMembers = () => {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -33,7 +32,7 @@ const TeamMembers = () => {
       return () => window.removeEventListener('resize', handleResize)
     }, [itemsToShow])
   
-    const totalScrollWidth = duplicatedTeam.length * (itemWidth + gap)
+    // const totalScrollWidth = duplicatedTeam.length * (itemWidth + gap)
   return (
     <div style={{
       backgroundImage: 'url(/bg-team.jpg)',
