@@ -1,36 +1,35 @@
-import { useEffect, useRef, useState } from "react"
 import { team } from "../../utils/teamMembers"
 
 const TeamMembers = () => {
-  const containerRef = useRef<HTMLDivElement>(null)
-    const [itemWidth, setItemWidth] = useState(0)
-    const [itemsToShow, setItemsToShow] = useState(3)
-    const gap = 24
-    const duplicatedTeam = [...team, ...team] // duplicated
+  // const containerRef = useRef<HTMLDivElement>(null)
+    // const [itemWidth, setItemWidth] = useState(0)
+    // const [itemsToShow, setItemsToShow] = useState(3)
+    // const gap = 24
+    // const duplicatedTeam = [...team, ...team] 
   
-    useEffect(() => {
-      const handleResize = () => {
-        const width = window.innerWidth
-        if (width >= 1024) {
-          setItemsToShow(3)
-        } else if (width >= 768) {
-          setItemsToShow(2)
-        } else {
-          setItemsToShow(1)
-        }
+    // useEffect(() => {
+    //   const handleResize = () => {
+    //     const width = window.innerWidth
+    //     if (width >= 1024) {
+    //       setItemsToShow(3)
+    //     } else if (width >= 768) {
+    //       setItemsToShow(2)
+    //     } else {
+    //       setItemsToShow(1)
+    //     }
   
-        if (containerRef.current) {
-          const totalWidth = containerRef.current.offsetWidth
-          const calculatedItemWidth =
-            (totalWidth - (itemsToShow - 1) * gap) / itemsToShow
-          setItemWidth(calculatedItemWidth)
-        }
-      }
+    //     if (containerRef.current) {
+    //       const totalWidth = containerRef.current.offsetWidth
+    //       const calculatedItemWidth =
+    //         (totalWidth - (itemsToShow - 1) * gap) / itemsToShow
+    //       setItemWidth(calculatedItemWidth)
+    //     }
+    //   }
   
-      handleResize()
-      window.addEventListener('resize', handleResize)
-      return () => window.removeEventListener('resize', handleResize)
-    }, [itemsToShow])
+    //   handleResize()
+    //   window.addEventListener('resize', handleResize)
+    //   return () => window.removeEventListener('resize', handleResize)
+    // }, [itemsToShow])
   
     // const totalScrollWidth = duplicatedTeam.length * (itemWidth + gap)
   return (
