@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux'
 import { closeSidebar, openSidebar } from '../store/sidebarSlice'
 import { useAppSelector } from '../store/hooks'
 import { FaXmark } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   const sidebar = useAppSelector((state) => state.sidebar.sidebarOPen)
@@ -30,8 +31,8 @@ const Navbar = () => {
       />
       {/* </div> */}
       <div className="hidden lg:flex items-center gap-4 font-semibold text-lg">
-        <h1>Home</h1>
-        <h1>About Us</h1>
+        <Link to={'/'}>Home</Link>
+        <Link to={'/about'}>About Us</Link>
         <h1>Services</h1>
         <h1>Contact Us</h1>
       </div>
