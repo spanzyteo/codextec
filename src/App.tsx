@@ -1,6 +1,6 @@
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import Home from './Home'
 import Footer from './Components/Footer'
 import About from './About'
