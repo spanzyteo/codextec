@@ -24,19 +24,19 @@ const JoinUs = () => {
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <IoMdCheckmarkCircleOutline className="text-[#0F4BB9] h-[25px] w-[25px]" />
-              <p className="text-[18px] leading-[26px] font-normal">
+              <p className="lg:text-[18px] text-[14px] lg:leading-[26px] font-normal">
                 Tailored solutions designed for your unique business goals
               </p>
             </div>
             <div className="flex items-center gap-3">
               <IoMdCheckmarkCircleOutline className="text-[#0F4BB9] h-[25px] w-[25px]" />
-              <p className="text-[18px] leading-[26px] font-normal">
+              <p className="lg:text-[18px] text-[14px] lg:leading-[26px] font-normal">
                 Expert team with a passion for design, development, and results
               </p>
             </div>
             <div className="flex items-center gap-3">
               <IoMdCheckmarkCircleOutline className="text-[#0F4BB9] h-[25px] w-[25px]" />
-              <p className="text-[18px] leading-[26px] font-normal">
+              <p className="lg:text-[18px] text-[14px] lg:leading-[26px] font-normal">
                 Timely delivery, transparent communication, and full support
               </p>
             </div>

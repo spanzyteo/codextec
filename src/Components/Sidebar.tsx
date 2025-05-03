@@ -57,7 +57,9 @@ const Sidebar = () => {
               Our Services
             </Link>
             <div className="w-full border-t border-t-gray-200"></div>
-            <h1>Contact Us</h1>
+            <Link to={'/contact'} onClick={handleCloseSidebar}>
+              Contact Us
+            </Link>
           </motion.div>
         </>
       )}

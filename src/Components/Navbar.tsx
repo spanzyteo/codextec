@@ -34,7 +34,7 @@ const Navbar = () => {
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
         <Link to={'/services'}>Our Services</Link>
-        <h1>Contact Us</h1>
+        <Link to={'/contact'}>Contact Us</Link>
       </div>
       <div className="hidden lg:flex items-center gap-6 font-semibold text-lg">
         <FiFacebook className="w-[20px] h-[20px]" />

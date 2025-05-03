@@ -1,10 +1,12 @@
 import Navbar from './Components/Navbar'
 import Sidebar from './Components/Sidebar'
 import { Routes, Route } from 'react-router-dom'
-import Home from './Home'
 import Footer from './Components/Footer'
-import About from './About'
-import Services from './Services'
+import About from './pages/About'
+import Services from './pages/Services'
+import Home from './pages/Home'
+import ServiceDetail from './pages/ServiceDetail'
+import Contact from './pages/Contact'
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/services" element={<Services />} />
+        <Route path="/services/:slug" element={<ServiceDetail />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </div>
