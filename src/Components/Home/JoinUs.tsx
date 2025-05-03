@@ -2,7 +2,7 @@ import { IoMdCheckmarkCircleOutline } from 'react-icons/io'
 
 const JoinUs = () => {
   return (
-    <div className="py-32 relative">
+    <div className="py-16 relative">
       <div className="flex flex-col lg:flex-row lg:items-center justify-between px-5 md:px-20 gap-8">
         <div className="flex gap-6 relative">
           <img

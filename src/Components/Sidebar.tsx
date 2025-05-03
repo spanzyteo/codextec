@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useAppDispatch, useAppSelector } from '../store/hooks'
 import { motion, AnimatePresence } from 'framer-motion'
 import { closeSidebar } from '../store/sidebarSlice'
+import { Link } from 'react-router-dom'
 
 const Sidebar = () => {
   const sidebar = useAppSelector((state) => state.sidebar.sidebarOPen)
@@ -44,11 +45,17 @@ const Sidebar = () => {
             transition={{ type: 'tween', duration: 0.3 }}
             className="fixed z-20 top-0 left-0 bottom-0 bg-white w-[300px] flex lg:hidden flex-col px-3 gap-3 text-[18px] pt-3 text-gray-700"
           >
-            <h1>Home</h1>
+            <Link to={'/'} onClick={handleCloseSidebar}>
+              Home
+            </Link>
             <div className="w-full border-t border-t-gray-200"></div>
-            <h1>About Us</h1>
+            <Link to={'/about'} onClick={handleCloseSidebar}>
+              About Us
+            </Link>
             <div className="w-full border-t border-t-gray-200"></div>
-            <h1>Services</h1>
+            <Link to={'/services'} onClick={handleCloseSidebar}>
+              Our Services
+            </Link>
             <div className="w-full border-t border-t-gray-200"></div>
             <h1>Contact Us</h1>
           </motion.div>

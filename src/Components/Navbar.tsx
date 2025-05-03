@@ -33,7 +33,7 @@ const Navbar = () => {
       <div className="hidden lg:flex items-center gap-4 font-semibold text-lg">
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
-        <h1>Services</h1>
+        <Link to={'/services'}>Our Services</Link>
         <h1>Contact Us</h1>
       </div>
       <div className="hidden lg:flex items-center gap-6 font-semibold text-lg">
