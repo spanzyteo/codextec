@@ -5,14 +5,13 @@ const Banner = () => {
   return (
     <>
       <div
-        // bgImage="/home-bg.jpg"
-        className="h-[500px] sm:h-[600px] lg:h-[800px] mt-[70px] sm:px-20 flex flex-col items-center sm:items-start justify-center gap-4"
-        style={{
-          backgroundImage: 'url(/home-bg.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          backgroundRepeat: 'no-repeat',
-        }}
+        className="h-[500px] sm:h-[600px] lg:h-[800px] mt-[70px] sm:px-20 flex flex-col items-center sm:items-start justify-center gap-4 bg-center bg-cover bg-no-repeat bg-[url(/home-bg.jpg)]"
+        // style={{
+        //   backgroundImage: 'url(/home-bg.jpg)',
+        //   backgroundSize: 'cover',
+        //   backgroundPosition: 'center',
+        //   backgroundRepeat: 'no-repeat',
+        // }}
       >
         <h1 className="text-[14px] md:text-[18px] text-white tracking-[5px] leading-[30px]">
           WE ARE DEDICATED
