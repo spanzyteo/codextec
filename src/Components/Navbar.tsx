@@ -34,6 +34,7 @@ const Navbar = () => {
         <Link to={'/'}>Home</Link>
         <Link to={'/about'}>About Us</Link>
         <Link to={'/services'}>Our Services</Link>
+        <Link to={'/portfolio'}>Our Portfolio</Link>
         <Link to={'/contact'}>Contact Us</Link>
       </div>
       <div className="hidden lg:flex items-center gap-6 font-semibold text-lg">
@@ -42,11 +43,11 @@ const Navbar = () => {
         <FiLinkedin className="w-[20px] h-[20px]" />
         <BsInstagram className="w-[20px] h-[20px]" />
       </div>
-      <div className="hidden xl:flex items-center gap-4 font-semibold">
+      {/* <div className="hidden xl:flex items-center gap-4 font-semibold">
         <p>codextec93@gmail.com</p>
         <p>/</p>
         <p>+2348134662374</p>
-      </div>
+      </div> */}
       {sidebar ? (
         <div className="block lg:hidden">
           <FaXmark

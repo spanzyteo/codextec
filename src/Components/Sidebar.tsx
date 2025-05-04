@@ -57,6 +57,10 @@ const Sidebar = () => {
               Our Services
             </Link>
             <div className="w-full border-t border-t-gray-200"></div>
+            <Link to={'/portfolio'} onClick={handleCloseSidebar}>
+              Our Portfolio
+            </Link>
+            <div className="w-full border-t border-t-gray-200"></div>
             <Link to={'/contact'} onClick={handleCloseSidebar}>
               Contact Us
             </Link>
