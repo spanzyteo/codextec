@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom'
 import { workService } from '../utils/workService'
 import JoinUs from '../Components/Home/JoinUs'
+import { Helmet } from 'react-helmet';
 
 const ServiceDetail = () => {
   const { slug } = useParams()
@@ -9,7 +10,49 @@ const ServiceDetail = () => {
   if (!service) return <div>Service not found</div>
 
   // const { icon: Icon, title, longDescription } = service
+
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.longDescription,
+    "provider": {
+      "@type": "Organization",
+      "name": "Codextec",
+      "url": "https://codextec.vercel.app/",
+      "logo": "/logo.svg" // Replace with actual logo URL
+    },
+    "areaServed": {
+      "@type": "Place",
+      "name": "Global"
+    },
+    "serviceType": service.title,
+    "url": window.location.href
+  };
   return (
+    <>
+    <Helmet>
+      <title>{service.title} | Codextec - Web & Software Development in Nigeria</title>
+      <meta
+        name="description"
+        content={service.longDescription.slice(0, 155)}
+      />
+      <meta
+        name="keywords"
+        content={`${service.title}, web development, software solutions, mobile app development, digital marketing`}
+      />
+      <meta name="author" content="Codextec" />
+      <meta property="og:title" content={`${service.title} | Codextec - Web & Software Development in Nigeria`} />
+      <meta
+        property="og:description"
+        content={service.longDescription.slice(0, 155)}
+      />
+      <meta property="og:url" content={`https://codextec.vercel.app/services/${slug}`} />
+      <meta property="og:type" content="website" />
+      <script type="application/ld+json">
+          {JSON.stringify(structuredData)}
+      </script>
+    </Helmet>
     <div className="flex flex-col">
       <div className="h-[350px] sm:h-[400px] lg:h-[515px] mt-[70px] flex flex-col justify-center px-6 lg:px-10 gap-2 bg-[url(/about-bg.jpg)] bg-center bg-cover bg-no-repeat">
         <h1 className="font-bold text-white text-4xl lg:text-6xl">
@@ -29,6 +72,7 @@ const ServiceDetail = () => {
       </div>
       <JoinUs />
     </div>
+    </>
   )
 }
 
