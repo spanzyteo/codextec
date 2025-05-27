@@ -1,6 +1,5 @@
 import { FiFacebook } from 'react-icons/fi'
-import { BsTwitterX } from 'react-icons/bs'
-import { FiLinkedin } from 'react-icons/fi'
+import { FaWhatsapp } from 'react-icons/fa6'
 import { BsInstagram } from 'react-icons/bs'
 import { MdMenu } from 'react-icons/md'
 import { useDispatch } from 'react-redux'
@@ -48,10 +47,18 @@ const Navbar = () => {
         </Link>
       </div>
       <div className="hidden lg:flex items-center gap-6 font-semibold text-lg">
-        <FiFacebook className="w-[17px] h-[17px]" />
-        <BsTwitterX className="w-[17px] h-[17px]" />
-        <FiLinkedin className="w-[17px] h-[17px]" />
-        <BsInstagram className="w-[17px] h-[17px]" />
+        <Link to={'https://www.facebook.com/share/15QuP5txUu/'} target="_blank">
+          <FiFacebook className="w-[25px] h-[25px]" />
+        </Link>
+        <Link
+          to={'https://www.instagram.com/codextec93?igsh=MWZuMTU0aG5rbzJncw=='}
+          target="_blank"
+        >
+          <BsInstagram className="w-[25px] h-[25px]" />
+        </Link>
+        <Link to={'https://wa.me/message/2RLOOWFMCJ6YC1'} target='_blank'>
+          <FaWhatsapp className="w-[25px] h-[25px]" />
+        </Link>
       </div>
       {sidebar ? (
         <div className="block lg:hidden">
